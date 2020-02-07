@@ -5,6 +5,12 @@ category: development
 draft: false
 ---
 
+짧은 시간이었지만 그간 배운 HTML, CSS, JS를 활용해 인스타그램의 메인페이지와 로그인 페이지를 클론 코딩했다.
+
+아래 코드는 메인 페이지에 자잘하게 들어가는 기능들을 구현하는데 사용된 자바스크립트 내용이다.
+
+주로 DOM의 동적 생성과 컨트롤, 이벤트 리스너와 이벤트 객체를 활용한 인터렉션 등의 내용이다.
+
 ```javascript
 const articleComment = document.getElementsByClassName('comment-list')[0]
 const commentForm = document.getElementsByClassName('comment-form')[0]
