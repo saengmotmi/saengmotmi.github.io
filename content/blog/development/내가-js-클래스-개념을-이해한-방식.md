@@ -39,4 +39,116 @@ setInterval() 함수의 다소 생소한 작동방식이 문제였지 그 외적
 > - class로 생성된 object들은 일단 한번 생성되고 나면 각기 생명력을 가진 하나의 물체가 된다.
 > - class는 constructor()로 시작하며 뒤이어 지는 메소드, 프로퍼티 등으로 구성된다. 이는 별도의 파일에서 함수를 실행하고 정의하는 등의 행위를 하는 것에 빗대어볼 수 있다. (예컨대 constructor에서 실행되는 코드들은 프로그램이 시작하고 나서 곧바로 실행되는 코드들에 대응하고, 메소드는 function(){} 등으로 정의되는 함수, 프로퍼티는 const/let으로 정의되는 변수에 대응한다.)
 
-class 개념을 이해하는 도중에 fucntion scope 문제로 this 객체를 사용하는데 문제가 발생할 수 있다는 조언을 들었다.
+```javascript
+const bg = document.getElementById('bg')
+const ghostStep = 3 //픽셀
+const ghostStepInterval = 50 //밀리세컨드
+const ghostGenerateInterval = 2000 //밀리세컨드
+let killScore = 0
+
+setInterval(function() {
+  const ghost = document.createElement('div')
+  let randX = Math.random() * 755
+
+  ghost.className = 'ghost-down'
+  ghost.setAttribute('style', 'left: ' + parseInt(randX) + 'px; top: 0px;')
+  //ghost.setAttribute('style', 'top: 0px;'); //그냥 ghost.style.top 안되나?
+  bg.appendChild(ghost)
+}, ghostGenerateInterval)
+
+setInterval(function() {
+  let ghostMoveDown = document.getElementsByClassName('ghost-down') //배열 인덱스를 사용하지 않으면 속도 개선 + 세밀한 조작 가능
+  for (let i = 0; i < ghostMoveDown.length; i++) {
+    //예컨대 객체를 사용한다든가
+    ghostMoveDown[i].style.top =
+      parseInt(ghostMoveDown[i].style.top) + ghostStep + 'px'
+
+    //피격 판정
+    //매 인터벌 마다 높이를 체크하면?
+    if (parseInt(ghostMoveDown[i].style.top) > 490) {
+      let heroLeft = parseInt(hero.style.left)
+      let heroRight = parseInt(hero.style.left) + 35
+      let ghostLeft = parseInt(ghostMoveDown[i].style.left)
+      let ghostRight = parseInt(ghostMoveDown[i].style.left) + 45
+
+      if (heroLeft <= ghostRight && ghostRight <= heroRight) {
+        ghostMoveDown[i].id = 'ghost-dead'
+      } else if (heroRight >= ghostLeft && heroRight <= ghostRight) {
+        ghostMoveDown[i].id = 'ghost-dead'
+      } else if (parseInt(ghostMoveDown[i].style.top) > 545) {
+        ghostMoveDown[i].id = 'ghost-dead'
+      }
+    }
+  }
+}, ghostStepInterval)
+
+setTimeout(function() {
+  setInterval(() => {
+    let ghostDisappear = document.getElementById('ghost-dead')
+    ghostDisappear.remove()
+  }, ghostGenerateInterval)
+}, 545 / (ghostStep / ghostStepInterval))
+```
+
+그리고 그 다음은 class 생성자를 사용해 새롭게 작성한 코드다.
+
+```javascript
+const bg = document.getElementById('bg') //없어도 작동함 -> html에 부여된 id가 전역변수처럼(?) 작동해서
+const ghostStep = 3 //픽셀
+const ghostStepInterval = 20 //밀리세컨드
+const ghostGenerateInterval = 1000 //밀리세컨드
+let killScore = 0
+
+class Enemy {
+  constructor() {
+    this.ghost = document.createElement('div')
+    this.createGhost()
+    this.moveDown()
+    this.isDead()
+  }
+
+  createGhost = () => {
+    //createElement를 사용해 고스트를 생성
+    let randX = Math.random() * 755
+
+    this.ghost.className = 'ghost-down'
+
+    this.ghost.style.left = parseInt(randX) + 'px'
+    this.ghost.style.top = '0'
+    bg.appendChild(this.ghost)
+  }
+
+  moveDown = () => {
+    setInterval(() => {
+      this.ghost.style.top = parseInt(this.ghost.style.top) + ghostStep + 'px'
+      this.isDead()
+    }, ghostStepInterval)
+  }
+
+  isDead = () => {
+    //createGhost에서 생성된 고스트를 setInterval을 사용해 아래로 이동
+    //조건을 판정해 만약 죽었으면 isDead() 호출
+
+    if (parseInt(this.ghost.style.top) > 490) {
+      let heroLeft = parseInt(myHero.heroId.style.left)
+      let heroRight = parseInt(myHero.heroId.style.left) + 35
+      let ghostLeft = parseInt(this.ghost.style.left)
+      let ghostRight = parseInt(this.ghost.style.left) + 45
+
+      if (heroLeft <= ghostRight && ghostRight <= heroRight) {
+        this.ghost.classList.add('ghost-dead')
+      } else if (heroRight >= ghostLeft && heroRight <= ghostRight) {
+        this.ghost.classList.add('ghost-dead')
+      }
+
+      if (parseInt(this.ghost.style.top) > 545) {
+        this.ghost.remove()
+      }
+    }
+  }
+}
+
+setInterval(() => {
+  const a = new Enemy()
+}, ghostGenerateInterval) // 인터벌 마다 Enemy 객체를 생성함
+```
