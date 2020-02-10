@@ -4,10 +4,21 @@ date: 2019-1-27 16:21:13
 lang: 'en'
 ---
 
-# Your name
+# Jong Taek Oh
 
-<div align="center">
+## About
 
-_Thank you for reading my resume. If you want to contact me, Please send me an email._
+- WILL BE UPDATED
+
+## EDUCATION & CAREER
+
+- Sejong Univ. 🗓2012.03 ~ 2018.08
+
+  - Bachelor of Arts - Communication Arts
+  - Bachelor of Business Administration
+
+- WeCode Bootcamp 🗓2020.01 ~
+
+  - Studying HTML, CSS, JavaScript, React
 
 </div>
