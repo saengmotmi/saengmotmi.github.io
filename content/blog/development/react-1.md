@@ -5,7 +5,7 @@ category: daily thinking
 draft: false
 ---
 
-## why React?
+## Why React?
 
 - 리액트를 활용하면 자신의 웹 애플리케이션 내 유저 인터페이스를 재사용 가능한 컴포넌트로 분리(ex. 종연님의 껍데기 html)하여 작성, 프로젝트의 유지보수를 쉽게 만들어줌
 
