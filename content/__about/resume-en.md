@@ -21,4 +21,6 @@ lang: 'en'
 
   - Studying HTML, CSS, JavaScript, React
 
-</div>
+## CONTACT
+
+- ohjtack@gmail.com

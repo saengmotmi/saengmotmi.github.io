@@ -11,11 +11,11 @@ draft: false
 
 ## 기본 개념 정리
 
-**1. 리액트 프로젝트를 만들고자 하는 폴더에 들어감**
+**1. 터미널에서 리액트 프로젝트를 만들고자 하는 폴더로 경로를 세팅함**
 
 <br>
 
-**2. create-react-app 명령을 사용해 만들어준다 => create-react-app [프로젝트명]**
+**2. create-react-app 명령을 사용해 새 프로젝트를 만들어준다 => ```create-react-app [프로젝트명]```**
 
 <br>
 
@@ -25,24 +25,24 @@ draft: false
 
 **4. 컴포넌트(유저 인터페이스를 재사용 가능하도록 분리한 것, 일종의 UI 조각) 파일들 파헤치기**
 
-> - ```react
->   import React, {component} from 'react';
+> - ```jsx
+>   import React, { component } from 'react'
 >   // 리액트와 그 내부의 컴포넌트를 불러옴, 파일에서 JSX를 사용하려면 꼭 임포트 해줘야 함
 >   ```
 >
-> - ```react
->   import logo from './logo.svg';
->   import './App.css';
+> - ```jsx
+>   import logo from './logo.svg'
+>   import './App.css'
 >   // 같은 폴더 안에 있는 사진 파일과 css 파일을 불러옴 -> import는 webpack과 연관 있으나 일단 패스
 >   ```
 >
-> - ```react
+> - ```jsx
 >   class App extend Component { }
 >   // 클래스를 활용해 컴포넌트를 만듦. 함수로 만드는 방법도 있음.
 >   ```
 >
-> - ```react
->   export default App;
+> - ```jsx
+>   export default App
 >   // 작성한 컴포넌트를 다른 곳에서 불러와 사용할 수 있도록 내보내기 함
 >   ```
 >
@@ -68,39 +68,37 @@ JSX를 사용하며 주의할 문법적 사항
 - JSX 안에 자바스크립트 값을 사용할 때는 먼저 선언하고 { 변수 } 형태로 사용
 - 렌더링에 조건을 걸어주려면 '삼항연산자'와 'AND 연산자' 사용 (if문은 불가능 -> IIFE는 가능)
 
-```react
+```jsx
 {
-	1 + 1 === 2
-		? (<div>맞아요!</div>)
-		: (<div>틀려요!</div>)
+  1 + 1 === 2 ? <div>맞아요!</div> : <div>틀려요!</div>
 }
 ```
 
-```react
+```jsx
 {
-	1 + 1 === 2 && (<div>맞아요!</div>) // AND 연산자는 true일 때만 보여주고 false는 안 보여줌
+  1 + 1 === 2 && <div>맞아요!</div> // AND 연산자는 true일 때만 보여주고 false는 안 보여줌
 }
 ```
 
 - 복잡한 조건은 JSX 밖에서 작성하는 걸 권장 -> 부득이 작성해야 한다면 IIFE 사용
 
-```react
+```jsx
 {
-	(function() {
-		if (value === 1) return (<div>하나</div>);
-		if (value === 2) return (<div>둘</div>);
-		if (value === 3) return (<div>셋</div>);
-	})()
+  ;(function() {
+    if (value === 1) return <div>하나</div>
+    if (value === 2) return <div>둘</div>
+    if (value === 3) return <div>셋</div>
+  })()
 }
 ```
 
 - IIFE 대신 switch문 사용해도 무방 // 아래 코드가 switch문이라는 건 아님
 
-```react
-(() => {
-	if (value === 1) return (<div>하나</div>);
-	if (value === 2) return (<div>둘</div>);
-	if (value === 3) return (<div>셋</div>);
+```jsx
+;(() => {
+  if (value === 1) return <div>하나</div>
+  if (value === 2) return <div>둘</div>
+  if (value === 3) return <div>셋</div>
 })()
 ```
 
@@ -112,21 +110,17 @@ JSX 내부 코드에 style 속성을 줄 수도 있다. 먼저 render 함수 아
 
 html에서는 style에 들어갈 자바스크립트 코드를 텍스트로 입력했었지만 리액트에서는 객체로 넘겨주어야 한다.
 
-```react
+```jsx
 class App extends Component {
   render() {
     const style = {
       backgroundColor: 'black',
       padding: '16px',
       color: 'white',
-      fontSize: '12px'
-    };
+      fontSize: '12px',
+    }
 
-    return (
-      <div style={style}>
-        hi there
-      </div>
-    );
+    return <div style={style}>hi there</div>
   }
 }
 ```
