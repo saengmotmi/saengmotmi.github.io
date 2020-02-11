@@ -7,7 +7,7 @@ draft: false
 
 ### 리액트님, 죄송한데 도저히 이해가 안됩니다...
 
-![이게 뭔](/content/blog/development/images/dog_sound.jpg "이게 뭔 개소리야!")
+![이게 뭔](images/dog_sound.jpg "이게 뭔 개소리야!")
 
 지난 2주 동안 html, css, 자바스크립트에 순서대로 입문해오면서 느낀 벽은 솔직히 그렇게 까진 높지 않았다. 물론 기본적인 컨셉에 대한 학습이 주된 내용었다는 점이 가장 큰 이유였을 것이다.
 
