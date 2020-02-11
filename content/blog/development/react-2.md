@@ -13,11 +13,15 @@ draft: false
 
 그러나 리액트는 왜 써야 하는지는 물론이고 당장 hello world를 띄우는 절차조차 어색했다. 문법은 html과 자바스크립트의 혼종인 JSX(JavaScript XML)를 사용했을 뿐더러, html 및 js파일들은 물론 각종 변수들이 어지럽게 얽혀 나의 인지과부하에 큰 공헌을 했다.
 
+<br>
+
 ### 그래도 두드리면 (아주 조금은) 열리더라
 
 그래도 만인의 선생님 고잉이형을 믿고 차근차근 코드를 따라 쳐보기로 했다. 다행히 '이게 뭔소리여' 정도는 벗어날 수 있었다. 이번 포스트에서는 내가 간신히 이해한 내용들을 조악하게나마 내가 이해한 방식으로 정리해보기로 한다.
 
-### 0. 리액트... 도당채 뭐세요?
+<br>
+
+#### 0. 리액트... 도당채 뭐세요?
 
 우선 [위키피디아](https://ko.wikipedia.org/wiki/%EB%A6%AC%EC%95%A1%ED%8A%B8_(%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8_%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC))에 따르면 리액트는,
 
@@ -43,7 +47,9 @@ draft: false
 
 그리고 이 툴이 MVC(Model, View, Controller) 중 특히 디자인 작업에 주로 사용된다는 사실 또한 덧붙여 두자.
 
-### 1. 시작은 '엔트리 포인트'부터
+<br>
+
+#### 1. 시작은 '엔트리 포인트'부터
 
 당연한 얘기다. 엔트리 포인트라는 말 자체가 '시작 점'이니까 말이다. 그러니 무엇을 시작할 건지를 생각해보아야 한다.
 
@@ -60,7 +66,9 @@ npm start
 
 이렇게 프로젝트가 최초 세팅되고 로컬 서버가 열리면 public 폴더 아래 index.html, index.js, index.css부터 만지기 시작하면 된다. 이는 Create React App에서 정해놓은 사항이니까 그냥 그렇게 알고 있자.
 
-### 2. ```ReactDOM.render(<App />, document.getElementById('root'));```
+<br>
+
+#### 2. ```ReactDOM.render(<App />, document.getElementById('root'));```
 
 index.html에는 ```<div id="root"></div>```라는 내용이, index.js에는 ```ReactDOM.render(<App />, document.getElementById('root'));```라는 내용이 있다. 최상단을 보면 ```import App from './App'```이 코드의 뜻은 다음과 같다.
 
@@ -134,7 +142,9 @@ return() {
 
 물론 이게 전부는 아니다. 나머지는 리액트를 사용하며 차근차근 익혀나가자.
 
-### 3. props & state
+<br>
+
+#### 3. props & state
 
 리액트에서 컴포넌트와 컴포넌트 사이에서 데이터를 주고 받을 때 **props**와 **state** 두 가지를 사용한다.
 
@@ -194,8 +204,6 @@ class App extends Component {
 
 export default App;
 ```
-
-
 
 ## 참고
 
