@@ -105,6 +105,7 @@ class FeedPost extends Component {
 
     render() {
         const { key, myUsrId, myImgSrc, mySrc, myPostImgSrc, postBody } = this.props;
+        // props로 받아온 값들을 비구조화 할당으로 찢어 좀 더 간단하게 컴포넌트 내에 뿌려줄 수 있다.
         return(
             <article id={key}>
                 <div className="post-account-name">
