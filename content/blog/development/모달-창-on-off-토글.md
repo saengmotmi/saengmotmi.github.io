@@ -8,7 +8,7 @@ draft: false
 사운드클라우드 사이트에서 상단 내비게이터 Sign In을 클릭할 경우 토글되는 회원가입/로그인 모달이 있다. 이 모달은 Sign In을 클릭할 시 위에서 떨어지고, 하얀 박스 외의 영역을 클릭할 시 윗 방향으로 다시 딸려 올라가는 식으로 작동한다.
 
 <div style="display: flex; justify-content: center;">
-  <img src="./images/031503.png" width="400">
+  <img src="./images/031503.png" width="400" loading="lazy" >
 </div>
 
 핵심 로직은
