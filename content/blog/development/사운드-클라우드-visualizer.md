@@ -66,3 +66,5 @@ for (j of dataUpscale) {
 <div style="display: flex; justify-content: center;">
   <img src="./images/031502.png" width="600">
 </div>
+
+참고) useRef Hook을 쓸 때는 꼭 current를 사용해야 ref의 리턴 값을 사용할 수 있다... 이거 빼먹어서 한참 고생 ㅠ
