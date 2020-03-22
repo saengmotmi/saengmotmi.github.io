@@ -13,7 +13,7 @@ draft: false
 
 <br>
 
-<div style="display: flex; justify-content: center;">
+<div align="center">
     <img src="./images/030702.png" width="300">
 </div>
 

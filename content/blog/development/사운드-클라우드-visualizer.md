@@ -7,7 +7,7 @@ draft: false
 
 사운드클라우드 클론 프로젝트 중 당면한 과제는 스트리밍 피드 페이지 로드 시 빠르게 파장 데이터가 표시된 플레이어를 로드하는 것이었다. 예시 화면은 아래와 같다.
 
-<div style="display: flex; justify-content: center;">
+<div align="center">
   <img src="./images/031501.png" width="300">
 </div>
 
