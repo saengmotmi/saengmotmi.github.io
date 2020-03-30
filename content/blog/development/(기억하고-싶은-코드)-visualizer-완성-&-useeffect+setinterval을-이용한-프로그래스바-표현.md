@@ -13,7 +13,7 @@ draft: false
 </div>
 
 <br>
-습
+
 [지난 번 포스팅](https://saengmotmi.netlify.com/development/%EC%82%AC%EC%9A%B4%EB%93%9C-%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-visualizer/)에서는 visualizer에 파장을 그리는 법에 대해 간단히 적었다. 다만 이 방식으로는 실제 사운드 클라우드 처럼 파형 모양 그대로 색칠되는 것이 아니라 박스 형태로 영역이 칠해지게 된다.
 
 이번 포스트에서는 마우스 움직임이나 곡 진행 상황에 따라 파형 모양으로 프로그래스바가 채워지는 것에 대해 설명한다.
