@@ -19,6 +19,8 @@ EC2 인스턴스 설정 과정이 정상적으로 마무리 됐다면 이제 로
 ssh -i [키 파일 경로/키 이름.pem] ubuntu@publicIP
 ```
 
+여기서 ubuntu는 해당 인스턴스의 username을 적으면 된다. 인스턴스를 생성하면 ubuntu는 기본적으로 존재하는 유저명이고 따라서 root라는 유저명도 사용 가능하다. 형민님이 인스턴스 환경을 윈도우즈로 만들어서 접속을 못했었어서 덧붙임.
+
 그런데 SSH가 뭔지 몰라서 tldr(Too Long Don't Read)에 쳐봤다. 위 명령은 원격 서버에 개인 ID를 가지고 접속할 때 사용되는 것 같다.
 
 > ssh
@@ -33,7 +35,8 @@ ssh -i [키 파일 경로/키 이름.pem] ubuntu@publicIP
 
 ```
 curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
-sudo apt-get update sudo apt-get install nodejs
+sudo apt-get update
+sudo apt-get install nodejs
 ```
 
 설치가 끝났으면 git에서 프로젝트를 clone 받은 뒤 필요한 설치를 해준다.
@@ -50,7 +53,14 @@ npm install express --save
 npm run build
 ```
 
-그리고 clone 받은 프로젝트 최상위폴더에 server.js라는 파일을 만들어주고(cat server.js -> vi server.js) 아래 파일을 붙여넣어준다.
+그리고 clone 받은 프로젝트 최상위폴더에 server.js라는 파일을 만들고 열어서
+
+```
+touch server.js
+vi server.js
+```
+
+아래 파일을 붙여넣어준다.
 
 ```js
 const express = require('express')
