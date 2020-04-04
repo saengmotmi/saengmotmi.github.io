@@ -14,9 +14,7 @@ draft: false
 
 <br>
 
-일단 하이차트에서 map 기능을 사용하기 위해서는 highmaps를 임포트 하거나 highcharts에 maps 모듈을 import 해야 한다. 둘중 어떤 방식을 택하든 상관 없지만 나는 후자의 방식을 선택했다. 나는 drilldown 기능도 써야했기에 drilldown 모듈도 같이 import 했다.
-
-모듈은 HOC로 하이차트에 씌워준다.
+일단 하이차트에서 map 기능을 사용하기 위해서는 highmaps를 임포트 하거나 highcharts에 maps 모듈을 import 해야 한다. 둘중 어떤 방식을 택하든 상관 없지만 나는 후자의 방식을 선택했다. 불러온 모듈은 하이차트에 씌워준다. 나는 drilldown 기능도 써야했기에 drilldown 모듈도 같이 import 했다.
 
 첫 화면에 띄워줄 세계 지도도 함께 import 해준다. drilldown으로 새롭게 그려줄 맵 파일의 동적 import는 [이 포스트](https://saengmotmi.netlify.com/development/2020-04-03-%EA%B8%B0%EC%97%85%ED%98%91%EC%97%85-2%EC%A3%BC%EC%B0%A8-%EA%B8%88%EC%9A%94%EC%9D%BC/)를 참고하면 된다.
 
