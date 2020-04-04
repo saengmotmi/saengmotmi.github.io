@@ -108,8 +108,8 @@ drillDownContries = e => {
   const chart = this.HighchartsReact.chart
 
   if (e.point['hc-key'] !== null) {
+    //highlight-next-line
     chart.addSingleSeriesAsDrilldown(e.point, {
-      //highlight-line
       name: 'kr',
       mapData: eval(e.point['hc-key'] + 'MapData'), //highlight-line
       data: eval(e.point['hc-key'] + 'Data'), //highlight-line
