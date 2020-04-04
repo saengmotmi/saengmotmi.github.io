@@ -18,10 +18,13 @@ draft: false
 
 모듈은 HOC로 하이차트에 씌워준다.
 
+첫 화면에 띄워줄 세계 지도도 함께 import 해준다. drilldown으로 새롭게 그려줄 맵 파일의 동적 import는 [이 포스트](https://saengmotmi.netlify.com/development/2020-04-03-%EA%B8%B0%EC%97%85%ED%98%91%EC%97%85-2%EC%A3%BC%EC%B0%A8-%EA%B8%88%EC%9A%94%EC%9D%BC/)를 참고하면 된다.
+
 ```javascript
 import HighchartsReact from 'highcharts-react-official'
 import highchartsMap from 'highcharts/modules/map'
 import drilldown from 'highcharts/modules/drilldown'
+import wdMapData from '@highcharts/map-collection/custom/world.geo.json'
 
 highchartsMap(Highcharts)
 drilldown(Highcharts)
