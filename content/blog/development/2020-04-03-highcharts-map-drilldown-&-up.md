@@ -67,7 +67,7 @@ this.state = {
         },
 
         events: {
-          click: event => this.drillDownContries(event),
+          click: event => this.drillDownContries(event), //highlight-line
         },
       },
     ],
@@ -89,7 +89,7 @@ render() {
 
   return (
     <HighchartsReact
-      constructorType={"mapChart"}
+      constructorType={"mapChart"} //highlight-line
       highcharts={Highcharts}
       options={data}
       ref={(ref) => (this.HighchartsReact = ref)}
@@ -106,9 +106,10 @@ drillDownContries = e => {
 
   if (e.point['hc-key'] !== null) {
     chart.addSingleSeriesAsDrilldown(e.point, {
+      //highlight-line
       name: 'kr',
-      mapData: eval(e.point['hc-key'] + 'MapData'),
-      data: eval(e.point['hc-key'] + 'Data'),
+      mapData: eval(e.point['hc-key'] + 'MapData'), //highlight-line
+      data: eval(e.point['hc-key'] + 'Data'), //highlight-line
       states: {
         hover: {
           color: '#BADA55',
@@ -119,15 +120,15 @@ drillDownContries = e => {
         format: '{point.name}',
       },
     })
-    e.point.doDrilldown()
-    chart.applyDrilldown()
+    e.point.doDrilldown() //highlight-line
+    chart.applyDrilldown() //highlight-line
   }
 }
 ```
 
 순서는 이렇다.
 
-1. chart 컴포넌트를 ref로 잡아둔다.
+1. chart 컴포넌트를 ref로 잡아둔다. constructorType도 "mapChart"로 선언해준다.
 2. `chart.addSingleSeriesAsDrilldown()`, `e.point.doDrilldown()`, `chart.applyDrilldown()` 메소드를 차례로 실행시킨다.
 3. `addsingSeriesAsDrilldown()`의 첫 번째 인자는 드릴다운이 시작될 위치, 즉 e.point(클릭 된 지점)가 되어야 한다. 두번째 인자로는 드릴다운 이후 보여질 지도의 정보가 들어가야 한다.
 
