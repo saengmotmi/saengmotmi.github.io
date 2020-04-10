@@ -34,6 +34,7 @@
     "intersection-observer": "^0.5.1",
     "lodash": "^4.17.15",
     "node-sass": "^4.13.1",
+    "nvm": "0.0.4",
     "prismjs": "^1.19.0",
     "react": "^16.13.0",
     "react-disqus-comments": "^1.4.0",
