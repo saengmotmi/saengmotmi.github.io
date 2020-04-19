@@ -42,8 +42,6 @@ draft: false
 </div>
 ```
 
-<br>
-
 먼저 componentDidMount와 함께 getMusic() 이라는 함수를 실행해 음원 데이터를 받아오도록 했다.
 
 ```js
