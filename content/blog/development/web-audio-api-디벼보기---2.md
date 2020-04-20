@@ -256,3 +256,5 @@ export default combineReducers({ rootSrc, rootCtx, rootNode, isPause, volume })
 5. func.js 안의 함수에 액션생성함수와 전역 state 전달
 
 아직 리덕스의 구체적인 메커니즘, 예를 들면 `connect()`, `combineReducers()` 등을 전부 이해하지는 못한 상태라 자세한 설명까지는 어려운 상태다. 다만 일단 이런 방식으로 기존에 구현했던 기능에 Redux를 적용할 수 있다는 점을 보인 데 의의를 두려 한다.
+
+다음 번에는 이 내용들을 기반으로 실제 프로젝트에 Redux를 적용하면서 리팩토링 해보도록 하자.
