@@ -5,13 +5,13 @@ category: development
 draft: false
 ---
 
-[저번 포스팅]("https://saengmotmi.netlify.app/development/web-audio-api-%EB%94%94%EB%B2%BC%EB%B3%B4%EA%B8%B0---1/")에서는 Web Audio API의 기본적인 세팅 및 재생, 정지, 일시정지, 볼륨 조절 등의 기능을 구현하는 데 집중했다. 이번 포스팅에서는 제목과는 어울리지 않게 Web Audio API의 기능을 추가적으로 건드리지는 않고 Redux를 붙이는 작업을 해볼 것이다.
+[저번 포스팅](https://saengmotmi.netlify.app/development/web-audio-api-%EB%94%94%EB%B2%BC%EB%B3%B4%EA%B8%B0---1/)에서는 Web Audio API의 기본적인 세팅 및 재생, 정지, 일시정지, 볼륨 조절 등의 기능을 구현하는 데 집중했다. 이번 포스팅에서는 제목과는 어울리지 않게 Web Audio API의 기능을 추가적으로 건드리지는 않고 Redux를 붙이는 작업을 해볼 것이다.
 
 왜냐하면 이 모든 일들이 사운드클라우드 클로닝을 위한 연습이기 때문이다. 사운드클라우드에서는 각 플레이어마다, 그리고 하단 재생바에서 동일한 기능이 작동해야 한다. 그러자면 전역 상태관리가 필수적이다.
 
 저번 포스팅의 결과물에 Redux를 적용하기 위해 약간의 리팩토링을 했다.
 
-컴포넌트는 App, Buttons, VolumeControler로 총 3개다. 그리고 버튼과 inputBox에 들어가는 함수들은 모두 별도 파일로 분리했다. Redux에 필요한 파일들은 src/store에 들어 있고 actions와 reducers 폴더를 만들고 그 안에 각각 index.js를 만들었다. index.js로 만드는 이유는 [이 포스팅]("https://saengmotmi.netlify.app/development/2020-04-10-%EA%B8%B0%EC%97%85%ED%98%91%EC%97%85-3%EC%A3%BC%EC%B0%A8-%EA%B8%88%EC%9A%94%EC%9D%BC/")을 참고할 것.
+컴포넌트는 App, Buttons, VolumeControler로 총 3개다. 그리고 버튼과 inputBox에 들어가는 함수들은 모두 별도 파일로 분리했다. Redux에 필요한 파일들은 src/store에 들어 있고 actions와 reducers 폴더를 만들고 그 안에 각각 index.js를 만들었다. index.js로 만드는 이유는 [이 포스팅](https://saengmotmi.netlify.app/development/2020-04-10-%EA%B8%B0%EC%97%85%ED%98%91%EC%97%85-3%EC%A3%BC%EC%B0%A8-%EA%B8%88%EC%9A%94%EC%9D%BC/)을 참고할 것.
 
 가장 먼저 루트 폴더에 위치한 `index.js`다. Provider 컴포넌트로 전체 앱을 감싸고 `createStore()`로 생성한 전역 store를 Provider에 붙여줬다. 다시 store에는 rootReducer를 붙여줬다. 이에 대한 소개는 뒤에서 하겠다.
 
