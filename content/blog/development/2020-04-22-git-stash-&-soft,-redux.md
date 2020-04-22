@@ -50,3 +50,66 @@ node_modules를 git repo에 업로드 하지 않기 때문에 대신 이 파일�
 ```bash
 git push origin master --force
 ```
+
+### 4. `Connect()`와 Reducer (Redux)
+
+이번엔 사클 리팩토링을 위해 연습 중인 리덕스 프로젝트다.
+
+Provider에 작성한 store에 접근하기 위해서는 `connect()` 함수로 redux store를 사용하고자 하는 컴포넌트를 감싸준 뒤 필요한 요소를 해당 컴포넌트의 props로 받아 써야 한다. 다음과 같이 말이다. 액션생성 함수도 깨알같이 spread 연산자를 이용해 정리해줬다.
+
+```jsx
+import React, { useEffect } from 'react'
+import { connect } from 'react-redux'
+import { setVolume } from '../store/actions'
+
+const setFunc = {
+  setVolume: setVolume,
+}
+
+const App = ({ setVolume }) => {
+  return (
+    <div id="App">
+      <Buttons />
+      <VolumeControler setVolume={setVolume} />
+    </div>
+  )
+}
+
+export default connect(null, { ...setFunc })(App) //highlight-line
+```
+
+위 코드블럭에서 하이라이트 한 부분이 해당 컴포넌트가 redux store와 연결되는 부분이다. connect 함수는 두 개의 인자를 받는다. 첫번째 인자에는 전역 store의 state, 두번째 인자에는 액션생성 함수가 연결된다. 그런데 프레젠테이셔널 컴포넌트니 뭐니 그런 말은 말만 복잡하지 실상 이해에 도움이 되는 부분이 없다. 그냥 connect 함수 파라미터의 첫번째는 state, 두번째는 set함수라 외우자.
+
+```js
+connect(mapStateToProps, ActionFunction)(컴포넌트)
+```
+
+그리고 동일 음원에 대한 데이터를 담던 reducer 세 개를 하나로 줄였다. [이전 포스팅](https://saengmotmi.netlify.app/development/web-audio-api-%EB%94%94%EB%B2%BC%EB%B3%B4%EA%B8%B0---2/)과 비교해보면 좋겠다.
+
+```jsx
+const music = (state = null, action) => {
+  switch (action.type) {
+    case 'REGISTER_SOURCE':
+      return { ...state, src: action.payload }
+    case 'REGISTER_CONTEXT':
+      return { ...state, ctx: action.payload }
+    case 'REGISTER_NODE':
+      return { ...state, node: action.payload }
+    default:
+      return state
+  }
+}
+```
+
+mapStateToProps로 받아주는 부분에서도 하나의 객체로 받아주자. 그러면 이제 사용할 때는 music.src, music.ctx 등으로 사용하면 된다. 훨씬 명료하고 관리하기 편해졌다.
+
+```jsx
+const mapStateToProps = state => {
+  return {
+    music: state.music,
+    isPause: state.isPause,
+  }
+}
+```
+
+reducer는 어렵게 생각할 거 없이 그냥 전역 state의 키 값이라고 생각하면 편하다. mapToStateToProps 함수에서 받아와 쓰는 모습만 봐도 그렇고... 암튼 이렇게 쓰면 된다. 이젠 정말정말 적용 준비 끝!
