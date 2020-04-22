@@ -1,5 +1,5 @@
 ---
-title: 2020-04-22 git stash & soft, redux
+title: 2020-04-22 git stash & reset --soft, redux
 date: 2020-04-22 18:04:25
 category: development
 draft: false
