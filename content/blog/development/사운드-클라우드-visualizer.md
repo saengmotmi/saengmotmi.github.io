@@ -1,5 +1,5 @@
 ---
-title: 사운드 클라우드 visualizer 구현
+title: 2020-03-15 사운드 클라우드 visualizer 구현
 date: 2020-03-15 20:03:68
 category: development
 draft: false

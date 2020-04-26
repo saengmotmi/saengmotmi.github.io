@@ -1,5 +1,5 @@
 ---
-title: react google 소셜 로그인(함수형 컴포넌트)
+title: 2020-03-15 react google 소셜 로그인(함수형 컴포넌트)
 date: 2020-03-15 23:03:43
 category: development
 draft: false

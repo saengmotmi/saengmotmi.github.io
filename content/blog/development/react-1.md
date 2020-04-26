@@ -1,5 +1,5 @@
 ---
-title: react-1
+title: 2020-02-10 react-1
 date: 2020-02-10 16:02:11
 category: development
 draft: false
@@ -15,7 +15,7 @@ draft: false
 
 <br>
 
-**2. create-react-app 명령을 사용해 새 프로젝트를 만들어준다 => ```create-react-app [프로젝트명]```**
+**2. create-react-app 명령을 사용해 새 프로젝트를 만들어준다 => `create-react-app [프로젝트명]`**
 
 <br>
 

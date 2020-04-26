@@ -1,5 +1,5 @@
 ---
-title: (React) 버튼 누를 때마다 새로 API 받아오기
+title: 2020-03-01 (React) 버튼 누를 때마다 새로 API 받아오기
 date: 2020-03-01 03:03:96
 category: development
 draft: false

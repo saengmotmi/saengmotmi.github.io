@@ -1,5 +1,5 @@
 ---
-title: 모달 창 on off 토글
+title: 2020-03-15 모달 창 on off 토글
 date: 2020-03-15 23:03:53
 category: development
 draft: false

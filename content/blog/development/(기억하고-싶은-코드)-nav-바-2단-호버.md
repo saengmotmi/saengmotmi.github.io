@@ -1,5 +1,5 @@
 ---
-title: (기억하고 싶은 코드) nav 바 2단 호버
+title: 2020-03-07 (기억하고 싶은 코드) nav 바 2단 호버
 date: 2020-03-07 20:03:97
 category: development
 draft: false

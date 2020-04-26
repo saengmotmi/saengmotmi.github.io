@@ -1,5 +1,5 @@
 ---
-title: map 함수!
+title: 2020-02-16 map 함수!
 date: 2020-02-16 21:02:50
 category: development
 draft: false
