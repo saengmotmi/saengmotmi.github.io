@@ -1,5 +1,5 @@
 ---
-title: Web Audio API 디벼보기 - 2 (사실은 Redux)
+title: 2020-04-20 Web Audio API 디벼보기 - 2 (사실은 Redux)
 date: 2020-04-20 17:04:32
 category: development
 draft: false

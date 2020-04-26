@@ -1,5 +1,5 @@
 ---
-title: Web Audio API 디벼보기 - 1
+title: 2020-04-20 Web Audio API 디벼보기 - 1
 date: 2020-04-20 01:04:37
 category: development
 draft: false
