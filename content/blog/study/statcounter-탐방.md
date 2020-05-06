@@ -75,7 +75,7 @@ draft: false
 
 이 부분이 상당히 충격적인 결과였다. 나는 지금까지 1920x1080 해상도를 당연하게 여기고 살아왔다. 하지만 실제 가장 높은 점유을 차지한 해상도는 1366x768이었다.
 
-이에 대해 찾은 가장 설득력 있는 [설명](https://superuser.com/questions/946086/why-does-1366x768-resolution-exist)을 참고하자. 대강 설명하자면 1024x768에서 더 높은 픽셀 수를 제공하기 위해 + 4:3에서 16:9 비율로 이행하기 위해 디스플레이 마더글래스에서 잘라내는 세로 픽셀을 유지하고 가로 픽셀만 늘렸다. 어느 정도 비율의 오차는 비용 문제에 비하면 감수할만 했다는 것이다.
+이에 대해 찾은 가장 설득력 있는 [설명](https://superuser.com/questions/946086/why-does-1366x768-resolution-exist)을 참고하자.
 
 <br>
 
@@ -84,6 +84,10 @@ draft: false
 > > The basis for this otherwise odd seeming resolution is similar to that of other "wide" standards – the line scan (refresh) rate of the well-established "XGA" standard (1024x768 pixels, 4:3 aspect) extended to give square pixels on the increasingly popular 16:9 widescreen display ratio without having to effect major signalling changes other than a faster pixel clock, or manufacturing changes other than extending panel width by 1/3rd. As 768 does not divide exactly into 9, the aspect ratio is not quite 16:9 – this would require a horizontal width of 1365.33 pixels. However, at only 0.05%, the resulting error is insignificant.
 
 > Citations are not provided, but it is a reasonable explanation: it's the closest to 16:9 they could get by keeping 768 vertical resolution from 1024x768, which had been widely used for manufacturing of early 4:3 LCD displays. Maybe that helped reduce costs.
+
+1024x768에서 더 높은 픽셀 수를 제공할 필요성이 생겼는데, 4:3에서 16:9 비율 또한 이행해야 했다. 그러나 비용의 문제 때문에 세로 픽셀을 유지하고 가로 픽셀만 늘렸고, 어느 정도 비율의 오차는 비용 문제에 비하면 감수할만 했다는 얘기다.
+
+여기서 비용 문제라는 건 아마 면취율 얘기이지 싶다. 면취율이란 마더글래스에서 잘라내 실제 활용하는 면적의 비율([삼성디스플레이 블로그](http://news.samsungdisplay.com/13671) 참고)로, 디스플레이 갯수에 차이가 생겼던 것이 아닐까 추측해본다.
 
 <br>
 
