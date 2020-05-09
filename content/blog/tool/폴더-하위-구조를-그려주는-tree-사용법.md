@@ -2,7 +2,7 @@
 title: 폴더 하위 구조를 그려주는 tree 사용법
 date: 2020-05-06 18:05:61
 category: tool
-draft: true
+draft: false
 ---
 
 대단한 내용은 아닌데 폴더의 하위 구조를 그려주는 tree라는 툴을 발견해서 포스팅 해둔다.
