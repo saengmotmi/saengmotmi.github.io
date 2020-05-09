@@ -41,6 +41,8 @@ lang: 'en'
 
 #### 연예 기획사 대상 통계 대시보드 데모 페이지 개발
 
+<div align="center"><img src="./1.png"></div>
+
 - React.js, React Hooks, HighCharts.js, Styled Components, Git
 - 프로그램 기획 전반 주도
 - PDF 보고서 출력 기능
@@ -50,6 +52,8 @@ lang: 'en'
 ### 1) Not- SoundCloud
 
 #### 음원스트리밍서비스 (2020.02.24 ~ 03.07)
+
+<div align="center"><img src="./2.png"></div>
 
 - React.js, React Hooks, Redux, Next.js, Styled Components, Git
 - Web Audio API를 통한 음원 스트리밍
@@ -63,6 +67,8 @@ lang: 'en'
 
 #### 신선식품새벽배송서비스 (2020.03.09 ~ 03.20)
 
+<div align="center"><img src="./3.png"></div>
+
 - React.js, SASS, Git
 - API를 통해 수신한 화면 상품 정보 출력 및 레이아웃 작성
 - state 값을 이용한 컴포넌트의 조건부 렌더링
@@ -73,19 +79,26 @@ lang: 'en'
 
 ### 3) Mini Project
 
-#### WECODE Happy Birthday to Wecode
+#### WECODE Happy Birthday to Wecode (2020.01 - 04)
 
-(2020.01 - 04) - 총 10시간에 걸쳐 완성된 위코드 1주년 기념 문예창작대회 투표 사이트
+<div align="center"><img src="./4.png"></div>
+
+- 총 10시간에 걸쳐 완성된 위코드 1주년 기념 문예창작대회 투표 사이트
 
 - 모달 및 슬라이드 기능 구현(Slick.js)
-  Sejong University Web Crawling (Python3)
 
 #### Web Crawling (Python3)
 
-중국입찰정보사이트 China bidding
+#### 1) 중국입찰정보사이트 China bidding
+
+<div align="center"><img src="./5.png"></div>
 
 - Selenium 사용, 키워드와 조건에 맞는 입찰 정보 수집, 기사작성
-  음원스트리밍서비스 Genie
+
+#### 2) 음원스트리밍서비스 Genie
+
+<div align="center"><img src="./6.png"></div>
+
 - BeautifulSoup 사용, 약 1년 반 분량 일간 100위 차트 수집 및 통계분석
 
 ## CONTACT
