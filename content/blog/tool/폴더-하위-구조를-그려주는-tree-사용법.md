@@ -20,6 +20,36 @@ tree --version
 
 여기서 터미널에 `tree`를 입력하면 폴더 구조가 출력되는데 그냥 이 명령어만 입력하면 엄청나게 많은 파일들이 출력될 것이다. 옵션 몇 가지를 함께 사용해야 유용하게 사용할 수 있다.
 
+tldr에서 확인해보면 이렇다.
+
+```
+tree
+Show the contents of the current directory as a tree.
+
+ - Show files and directories up to 'num' levels of depth (where 1 means the current directory):
+   tree -L {{num}}
+
+ - Show directories only:
+   tree -d
+
+ - Show hidden files too:
+   tree -a
+
+ - Print the tree without indentation lines, showing the full path instead (use -N to not escape whitespace and special characters):
+   tree -i -f
+
+ - Print the size of each node next to it, in human-readable format:
+   tree -s -h
+
+ - Filter the tree using a wildcard (glob) pattern:
+   tree -P {{*.txt}}
+
+ - Ignore entries that match a wildcard (glob) pattern:
+   tree -I {{*.txt}}
+```
+
+위에서 확인한 내용을 바탕으로 직접 옵션을 조합해 원하는 방식으로 폴더 구조를 출력해보자.
+
 다음은 `tree -d -N -L 2 -I "node_modules"`의 실행 결과다. 이 옵션은 디렉토리만 표시, 한글 깨지지 않게, depth는 2단계까지, `node_modules` 폴더는 제외하고 출력한다.
 
 ```
