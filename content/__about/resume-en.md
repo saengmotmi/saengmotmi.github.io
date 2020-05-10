@@ -6,6 +6,8 @@ lang: 'en'
 
 # Jong Taek Oh
 
+### Front-end Developer
+
 ## About
 
 - 어릴 적 비주얼베이직 6.0 으로 채팅 프로그램을 만들고 처음 느꼈던 희열을 잊지 못해 개발자의 삶을 살기로 결심했습니다.
