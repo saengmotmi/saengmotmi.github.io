@@ -33,13 +33,19 @@ target.addEventListener(type, listener[, useCapture]); // highlight-line
 target.addEventListener(type, listener[, useCapture, wantsUntrusted  ]); // Gecko/Mozilla only
 ```
 
-여기서 두 번째 줄, 세 번째 옵션에 useCapture라는 파라미터가 있다. 해당 옵션의 설명을 읽어보자. 이 옵션은 default가 false인 boolean 값이며, false는 버블링(공기 방울이 물속에서 아래에서 위로 떠오른다는 사실을 기억하자), true일 경우 이벤트 전파는 캡처링 방향을 택하게 된다.
+여기서 두 번째 줄, 세 번째 옵션에 useCapture라는 파라미터가 있다.
 
-> DOM 트리의 하단에 있는 EventTarget 으로 전송하기 전에, 등록된 listener 로 **이 타입의 이벤트의 전송여부를 나타내는 Boolean** 입니다. 트리에서 위쪽으로 버블링되는 이벤트는 캡처를 사용하도록, 지정된 listener를 트리거하지 않습니다. 이벤트 버블링과 캡쳐는 두 요소(엘리먼트)가 해당 이벤트에 대한 핸들(함수)를 등록한 경우, 다른 요소 내에 중첩된 요소에서 발생하는 이벤트를 전파하는 두 가지 방법 입니다. 이벤트 전파 모드는 요소가 이벤트를 수신하는 순서를 판별합니다. 자세한 설명은 DOM Level 3 Events 과 JavaScript Event order 를 참조하세요. 값을 지정하지 않으면, **useCapture 의 기본값은 false** 입니다.
+해당 옵션의 설명을 읽어보자. 이 옵션은 default가 false인 boolean 값이며, **false는 버블링**(공기 방울이 물속에서 아래에서 위로 떠오른다는 사실을 기억하자), **true일 경우는 캡처링** 방향으로 이벤트 전파가 일어나게 된다.
 
 useCapture가 꺼져있을 때는 버블링, 켜져있으면 캡처링으로 생각하면 기억하기 편하겠다.
 
-이 사실을 확인해보기 위해 useCapture 옵션의 boolean 값을 바꿔가며 onClick 이벤트를 트리거 시켜보자. 다음과 같은 구조의 html 태그를 준비하고, 이벤트 리스너를 달아주자. 클릭 이벤트가 트리거 되면 이벤트 리스너의 콜백함수는 해당 태그의 id 값을 console에 출력한다.
+> DOM 트리의 하단에 있는 EventTarget 으로 전송하기 전에, 등록된 listener 로 **이 타입의 이벤트의 전송여부를 나타내는 Boolean** 입니다. 트리에서 위쪽으로 버블링되는 이벤트는 캡처를 사용하도록, 지정된 listener를 트리거하지 않습니다. 이벤트 버블링과 캡쳐는 두 요소(엘리먼트)가 해당 이벤트에 대한 핸들(함수)를 등록한 경우, 다른 요소 내에 중첩된 요소에서 발생하는 이벤트를 전파하는 두 가지 방법 입니다. 이벤트 전파 모드는 요소가 이벤트를 수신하는 순서를 판별합니다. 자세한 설명은 DOM Level 3 Events 과 JavaScript Event order 를 참조하세요. 값을 지정하지 않으면, **useCapture 의 기본값은 false** 입니다.
+
+## Go & Check it
+
+이 사실을 확인해보기 위해 useCapture 옵션의 boolean 값을 바꿔가며 onClick 이벤트를 트리거 시켜보자.
+
+다음과 같은 구조의 html 태그를 준비하고, 이벤트 리스너를 달아주자. 클릭 이벤트가 트리거 되면 이벤트 리스너의 콜백함수는 해당 태그의 id 값을 console에 출력한다.
 
 <br>
 
