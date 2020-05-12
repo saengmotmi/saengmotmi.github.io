@@ -7,7 +7,7 @@ draft: false
 
 <br>
 
-<div align="center"><img src="./images/051202.png" /></div>
+<div align="center"><img src="./images/051202.jpg" /></div>
 
 <br>
 
