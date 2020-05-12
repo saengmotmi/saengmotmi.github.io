@@ -56,6 +56,7 @@ useCapture가 꺼져있을 때는 버블링, 켜져있으면 캡처링으로 생
 <br>
 
 ```js
+// 준석님 가라사대...
 const events = ['foo', 'bar', 'baz'].map(e => {
   const func = () => {
     console.log(e)
