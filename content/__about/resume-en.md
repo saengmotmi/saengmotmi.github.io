@@ -37,6 +37,11 @@ lang: 'en'
 
   - Studying Web, Front-end Skills, etc.
 
+- RSupport 🗓2020.06 ~
+
+  - Front-End Developer
+    <!--
+
 ## INTERNSHIP
 
 ### 한터글로벌
@@ -101,7 +106,7 @@ lang: 'en'
 
 <div align="center"><img src="./6.png"></div>
 
-- BeautifulSoup 사용, 약 1년 반 분량 일간 100위 차트 수집 및 통계분석
+- BeautifulSoup 사용, 약 1년 반 분량 일간 100위 차트 수집 및 통계분석 -->
 
 ## CONTACT
 
