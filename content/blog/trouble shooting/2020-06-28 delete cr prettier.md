@@ -73,12 +73,7 @@ CR은 Carrage Return, LF는 Line Feed다. 간단히 말하자면 운영체제가
   // ...
   "rules": {
     "linebreak-style": ["error", "windows"] // "off"라고 주면 아예
-  },
-  "prettier/prettier" : ["error", {
-    // ...
-    "endOfLine": "auto"
-    // ...
-  }]
+  }
 }
 ```
 
