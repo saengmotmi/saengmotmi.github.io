@@ -37,9 +37,9 @@ lang: 'en'
 
   - Studying Web, Front-end Skills, etc.
 
-- RSupport 🗓2020.06 ~
+- WeCode Bootcamp 🗓2020.06 ~
 
-  - Front-End Developer
+  - Front-End Developer & Mentor
     <!--
 
 ## INTERNSHIP
