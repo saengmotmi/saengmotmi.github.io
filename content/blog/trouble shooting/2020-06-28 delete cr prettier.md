@@ -25,12 +25,12 @@ draft: false
 
 ```js
 // before lint
-<div className="hi" onClick={this.setState({foo: "bar"}) onChange={() => this.fooHandler("baz")}}>테스트</div>
+<div className="hi" onClick={() => this.setState({foo: "bar"}) onChange={() => this.fooHandler("baz")}}>테스트</div>
 
 // after lint
 <div
   className="hi"
-  onClick={this.setState({foo: "bar"})
+  onClick={() => this.setState({foo: "bar"})
   onChange={() => this.fooHandler("baz")}}
 >
   테스트
@@ -72,7 +72,7 @@ CR은 Carrage Return, LF는 Line Feed다. 간단히 말하자면 운영체제가
 {
   // ...
   "rules": {
-    "linebreak-style": ["error", "windows"] // "off"라고 주면 아예
+    "linebreak-style": ["error", "windows"] // "off" 옵션을 주면 규칙이 아예 작동하지 않음
   }
 }
 ```
