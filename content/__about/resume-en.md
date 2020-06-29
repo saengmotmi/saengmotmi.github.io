@@ -28,18 +28,18 @@ lang: 'en'
 
 ## EDUCATION & CAREER
 
-- Sejong Univ. 🗓2012.03 ~ 2018.08
+- WeCode Bootcamp 🗓2020.06 ~
 
-  - Bachelor of Arts - Communication Arts
-  - Bachelor of Business Administration
+  - Front-End Developer & Mentor
 
 - WeCode Bootcamp 🗓2020.01 ~ 2020.04
 
   - Studying Web, Front-end Skills, etc.
 
-- WeCode Bootcamp 🗓2020.06 ~
+- Sejong Univ. 🗓2012.03 ~ 2018.08
 
-  - Front-End Developer & Mentor
+  - Bachelor of Arts - Communication Arts
+  - Bachelor of Business Administration
     <!--
 
 ## INTERNSHIP
