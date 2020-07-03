@@ -77,6 +77,7 @@ const App = () => {
   }
 
   const deleteMarker = () => markerArr.forEach(e => e.setMap(null))
+
   useEffect(() => {
     getLocation(1) // location 정보 fetch
     createMap()
