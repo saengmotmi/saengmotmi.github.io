@@ -120,3 +120,7 @@ ApolloProvider가 마치 redux Provider 같은 역할을 하게 된다
 
 - [GraphQL 개념 잡기](https://tech.kakao.com/2019/08/01/graphql-basic/)
 - [A cartoon guide to Facebook’s Relay, part 1](https://code-cartoons.com/a-cartoon-intro-to-facebook-s-relay-part-1-3ec1a127bca5)
+
+<br>
+
+\#wecode \#위코드
