@@ -29,7 +29,7 @@ Facebook이 2015년 오픈소스로 공개한 GraphQL(gql)은 이런 상황에�
 
 ### gql은 "API에 대한 쿼리 언어"다
 
-공식 문서에 따르면 그렇다. gql API에 대해 클라이언트가 쿼리를 요청하는 상황을 나타낸 것이다. 이름이 비슷한 sql과는 비슷하면서도 조금 다르다. sql이 백엔드 서버와 DB 간의 통신에 사용되었다면 gql은 백엔드 서버와 프론트엔드 간의 통신에 유용하게 사용된다. 두 언어 간 사용되는 목적과 환경이 다르기 때문에 상호보완적이라고도 말할 수 있을 듯 하다.
+공식 문서에 따르면 그렇다. gql API에 대해 클라이언트가 쿼리를 요청하는 상황을 나타낸 듯하다. 이름이 비슷한 sql과는 비슷하면서도 조금 다른데, sql이 백엔드 서버와 DB 간의 통신에 사용되었다면 gql은 백엔드 서버와 프론트엔드 간의 통신에 유용하게 사용된다. 두 언어 간 사용되는 목적과 환경이 다르기 때문에 상호보완적이라고도 말할 수 있을 듯 하다.
 
 <br>
 
@@ -73,7 +73,7 @@ gql은 효율적인 요청 구조를 가지고 있다는 것 외에도 다양한
 - Apollo Provider 등을 통해 Redux, Context API 등 전역 상태 관리 라이브러리를 대체할 수 있다.
 - 보다 편리하게 Caching 기능을 지원하여 유저에게 더 나은 사용자 경험을 제공할 수 있다.
 - Http 프로토콜 외 Websocket 프로토콜 또한 지원하여 실시간 subscription 기능도 제공한다.
-- PlayGround를 제공하여 API에 대한 문서화 및 테스트가 아주 편리하다.
+- PlayGround를 제공하여 API에 대한 자동 문서화(type 및 parameter 확인) 및 테스트가 아주 편리하다.
 - 등등...
 
 ```jsx
@@ -108,7 +108,7 @@ ApolloProvider가 마치 redux Provider 같은 역할을 하게 된다
 
 놀라운 건 이 모든 것들이 GraphQL이 단일 gateway 구조를 가짐으로서 발생한 부수적인 효과라는 점이다. 역시 구조적인 문제는 구조로 해결해야 한다는 점을 새삼 깨닫는다. structure는 위대해...
 
-다음 번에는 apollo(어느 글에선가 apollo가 django라면 relay는 flask라는 말을 보고)를 사용해 query와 mutation을 사용하는 간단한 프로젝트를 구현해보겠다.
+다음 포스팅에는 query와 mutation에 대한 개념을 정리하고, apollo client(어느 글에선가 apollo가 django라면 relay는 flask라는 말을 보고)를 사용해 query와 mutation을 이용한 간단한 예제 프로젝트를 구현해보겠다.
 
 ### GraphQL 학습 자료
 
