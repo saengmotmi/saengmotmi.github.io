@@ -1,4 +1,10 @@
 {
-    "editor.formatOnSave": true,
-    "liveServer.settings.port": 5501
+  "editor.formatOnSave": true,
+  "liveServer.settings.port": 5501,
+    "extensions.ignoreRecommendations": true,
+    "files.autoSave": "off",
+    "debug.allowBreakpointsEverywhere": true
+  "extensions.ignoreRecommendations": true,
+  "files.autoSave": "off",
+  "debug.allowBreakpointsEverywhere": true
 }
