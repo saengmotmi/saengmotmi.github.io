@@ -73,6 +73,8 @@ const p = new Promise((resolve, reject) => {
 - rejected : 해당 promise가 reject됨. catch() 등을 통해 핸들링 해야 함.
 - pending : 아직 reject 되지도, resolve 되지도 않은 promise의 상태.
 
+<br>
+
 예시를 보자. 다음은 기존 `setTimeout` 함수를 커스텀한 예제다. 넘어오는 인자의 타입을 체크하여 숫자가 아니면 `Promise` 객체의 상태를 `reject`로 반환하고, 숫자가 맞을 경우 callback으로 받은 함수를 실행하고 `resolve`를 반환한다.
 
 ```js
