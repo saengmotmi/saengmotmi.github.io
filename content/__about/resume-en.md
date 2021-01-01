@@ -20,6 +20,7 @@ lang: 'en'
 - React / React Hooks
 - Redux
 - Next.js
+- GraphQL / Apollo
 - SASS
 - Styled Components
 - HTML5 / CSS3
