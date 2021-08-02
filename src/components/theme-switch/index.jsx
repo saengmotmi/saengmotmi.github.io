@@ -36,9 +36,9 @@ export const ThemeSwitch = () => {
   }
 
   useEffect(() => {
-    //   // const checked = Dom.hasClassOfBody(THEME.DARK)
+    const checked = Dom.hasClassOfBody(THEME.DARK)
 
-    handleChange(true)
+    handleChange(checked)
   }, [])
 
   return (
