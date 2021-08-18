@@ -2,7 +2,7 @@
 title: 2021-08-08 react-query가 해결하고자 하는 문제들
 date: 2021-08-08 03:08:42
 category: study
-draft: false
+draft: true
 ---
 
 ## 1. 프론트엔드의 영원한 숙제, 상태 관리(state management)

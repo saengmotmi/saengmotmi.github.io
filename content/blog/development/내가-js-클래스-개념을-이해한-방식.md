@@ -1,5 +1,5 @@
 ---
-title: 2020-02-08 1내가 JavaScript 클래스 개념을 이해한 방식
+title: 2020-02-08 내가 JavaScript 클래스 개념을 이해한 방식
 date: 2020-02-08 14:02:69
 category: development
 draft: false
