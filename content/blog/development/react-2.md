@@ -2,7 +2,7 @@
 title: 2020-02-11 react-2
 date: 2020-02-11 11:02:41
 category: development
-draft: false
+draft: true
 ---
 
 ### 리액트님, 죄송한데 도저히 이해가 안됩니다...

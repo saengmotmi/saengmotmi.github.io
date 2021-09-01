@@ -2,7 +2,7 @@
 title: 2020-03-01 (React) 동적인 state 생성 및 변수를 키값으로 하는 setState
 date: 2020-03-01 01:03:96
 category: development
-draft: false
+draft: true
 ---
 
 마켓컬리 클론 코딩 1차 프로젝트를 하던 중 setState() 활용에 대한 조그만 의문점이 생겼다. 왜 state를 정적으로만 사용하지? 필요에 따라 동적으로 state를 생성하고 관리할 수는 없느냐는 말이다.

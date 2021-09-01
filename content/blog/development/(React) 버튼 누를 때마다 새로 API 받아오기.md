@@ -2,7 +2,7 @@
 title: 2020-03-01 (React) 버튼 누를 때마다 새로 API 받아오기
 date: 2020-03-01 03:03:96
 category: development
-draft: false
+draft: true
 ---
 
 이번 포스트에서는 API를 사용한 통신이 버튼을 누를 때마다 발생하도록 하는 방법을 설명한다.

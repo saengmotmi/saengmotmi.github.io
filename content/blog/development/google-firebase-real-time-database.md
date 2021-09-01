@@ -2,7 +2,7 @@
 title: 2020-06-07 google firebase real time database
 date: 2020-06-07 16:06:62
 category: development
-draft: false
+draft: true
 ---
 
 ## 호밀 밭의 불침번 시-작

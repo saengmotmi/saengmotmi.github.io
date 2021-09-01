@@ -2,7 +2,7 @@
 title: 2020-03-22 (기억하고 싶은 코드) visualizer 완성 & useEffect+setInterval을 이용한 프로그래스바 표현
 date: 2020-03-22 19:03:14
 category: development
-draft: false
+draft: true
 ---
 
 ### 1. 파형 모양의 따라오는 프로그래스바

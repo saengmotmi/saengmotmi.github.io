@@ -2,7 +2,7 @@
 title: 2020-02-05 인스타그램 클론 코딩 완료
 date: 2020-02-05 23:02:01
 category: development
-draft: false
+draft: true
 ---
 
 짧은 시간이었지만 그간 배운 HTML, CSS, JS를 활용해 인스타그램의 메인페이지와 로그인 페이지를 클론 코딩했다.
