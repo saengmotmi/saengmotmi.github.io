@@ -29,7 +29,7 @@
     "gatsby-remark-responsive-iframe": "^2.2.33",
     "gatsby-remark-smartypants": "^2.1.22",
     "gatsby-source-filesystem": "^2.1.50",
-    "gatsby-transformer-remark": "^2.6.55",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.1.17",
     "intersection-observer": "^0.5.1",
     "lodash": "^4.17.15",
